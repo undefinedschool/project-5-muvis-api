@@ -1,1 +1,1 @@
-# project-5-muviez-api
+# Project 5: Muvis API
