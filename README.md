@@ -26,13 +26,25 @@ El formato con el que guardaremos las películas en la base de datos será el si
 
 - Usar [`got`](https://github.com/sindresorhus/got) para realizar los requests.
 - Para manipular las fechas, se recomienda utilizar [`date-fns`](https://date-fns.org/) (o hacerlo a mano).
-- Para guardar las películas obtenidas, vamos a utilizar [`low-db`](https://github.com/typicode/lowdb). Utilizar un módulo aparte para esto (importarlo donde sea necesario) y definirle una API para interactuar con el mismo a través de diferentes métodos.
-- Al iniciar la aplicación, en el caso de que la base de datos (ver ítem anterior) se encuentre vacía, debemos realizar el request correspondiente para obtener las primeras 100 películas de las mejor puntuadas para realizar el _seeding_ inicial.
 - Utilizar el `Router` de `Express` para definir la lógica de routing en un módulo aparte, y setear `/api` como prefijo de todas las rutas. Utilizar el método [`route()`](http://expressjs.com/en/4x/api.html#router.route), para definir las rutas de una forma más declarativa. 
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
+## Base de Datos
+
+- Para guardar las películas obtenidas, vamos a utilizar [`low-db`](https://github.com/typicode/lowdb) como base de datos. Utilizarlo un módulo aparte (importarlo donde sea necesario) y **definirle una API para interactuar con el mismo a través de diferentes métodos**.
+- Al iniciar la aplicación, en el caso de que la base de datos (ver ítem anterior) se encuentre vacía, debemos realizar el request correspondiente para obtener las primeras 100 películas de las mejor puntuadas para realizar el _seeding_ inicial.
+- Antes de guardar una nueva película en la db, vamos a validarla con un _schema_, utilizando [`ajv`](https://github.com/epoberezkin/ajv). Por ejemplo, si tenemos el método `add` para agregar películas, podríamos hacer algo como
+
+```js
+add(movie) {
+  if (valid(movie)) {
+    db.get('muvis').push(movie);
+  }
+}
+```
 
 ## Endpoints
 
