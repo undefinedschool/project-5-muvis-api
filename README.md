@@ -71,7 +71,7 @@ En todos los casos, si no hay películas para mostrar, debe retornarse el array 
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
-## Validaciones
+### Validaciones
 
 Utilizar el middleware [`express-validator`](https://express-validator.github.io/) para realizar las siguientes validaciones sobre el input (`body` del request)
   
