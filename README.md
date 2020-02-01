@@ -76,7 +76,7 @@ En todos los casos, si no hay películas para mostrar, debe retornarse el array 
 Utilizar el middleware [`express-validator`](https://express-validator.github.io/) para realizar las siguientes validaciones sobre el input (`body` del request)
   
 - `title`: debe existir y tener al menos 2 caracteres, sino generar el error `movie title is required and should have minimum 2 characters.`, con `status code` 400 y pasarle el objeto `err` a `next`.
-- `date`: debe ser una fecha con el formato , sino generar el error `movie date is required and should be in mm-dd-yyyy format.`, con `status code` 400 y pasarle el objeto `err` a `next`.
+- `date`: debe ser una fecha con el formato `yyyy-mm-dd`, sino generar el error `movie date is required and should be in yyyy-mm-dd format.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 - `overview`: debe existir y tener al menos 50 caracteres, sino generar el error `movie description is required and should have minimum 50 characters.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 - `rate`: debe existir y ser un número entre 1 y 10, sino generar el error `movie rate is required and should be a number between 1 and 10.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 - `genres`: debe existir y ser un array de strings, sino generar el error `movie genre is required.`, con `status code` 400 y pasarle el objeto `err` a `next`.
