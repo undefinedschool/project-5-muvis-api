@@ -86,10 +86,11 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 ## Middleware a utilizar
 
 - `Router` de `Express`
-- Error-handling middleware (ver detalles en [helpful-express-middleware](https://www.rithmschool.com/courses/node-express-fundamentals/helpful-express-middleware))
+- Custom Error-handling middleware (ver detalles en [helpful-express-middleware](https://www.rithmschool.com/courses/node-express-fundamentals/helpful-express-middleware))
 - [`express-validator`](https://express-validator.github.io/), para realizar las validaciones correspondientes
-- [`morgan`](https://www.npmjs.com/package/morgan), para loguear en la terminal todos los _requests_ y _responses_ generados (**sólo si estamos en modo desarrollo**)
+- [`morgan`](https://www.npmjs.com/package/morgan), para loguear en la terminal todos los _requests_ y _responses_ generados (ver detalles en []())
 - [`helmet.js`](https://helmetjs.github.io/)
+  - Ver [Use Helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
@@ -99,13 +100,29 @@ Definir los scripts `dev` y `start` en el `package.json` para poder correr nuest
 
 - **modo desarrollo**: 
   - `npm run dev` 
-  - corre `nodemon` y [`morgan`](https://www.npmjs.com/package/morgan)
+  - corre `nodemon` y [`morgan`](https://www.npmjs.com/package/morgan) en modo `dev` (ver detalles abajo)
 - **modo producción**: 
   - [Setear `NODE_ENV` en modo producción](http://expressjs.com/en/advanced/best-practice-performance.html#set-node_env-to-production), usando [`cross-env`](https://www.npmjs.com/package/cross-env)
   - `npm run start` (corre el script `pm2 start app.js`, usando [`pm2`](https://pm2.keymetrics.io/))
-  - Ver [Ensure your app automatically restarts
-](http://expressjs.com/en/advanced/best-practice-performance.html#ensure-your-app-automatically-restarts)
+    - Ver [Ensure your app automatically restarts](http://expressjs.com/en/advanced/best-practice-performance.html#ensure-your-app-automatically-restarts)
   - Habilitar la [compresión `GZIP`](https://alligator.io/nodejs/compression/) para todos los requests
+  - [`morgan`](https://www.npmjs.com/package/morgan) en modo `common` (ver detalles abajo)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
+### Uso de `morgan`
+
+```js
+if (process.env.NODE_ENV === 'production') {
+  app.use(morgan('common', {
+    // log 400s and 500s only
+    skip: (req, res) => res.statusCode < 400, 
+    stream: `${__dirname}/../morgan.log`
+  }));
+} else {
+  app.use(morgan('dev'));
+}
+```
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
