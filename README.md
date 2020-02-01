@@ -4,6 +4,22 @@ Vamos a utilizar la [API de The Movie DB](https://www.themoviedb.org/faq/api) pa
 
 **Nota:** vamos a necesitar obtener una _API KEY_ para poder realizar los requests, como se indica en el [FAQ](https://www.themoviedb.org/faq/api). Esta _API KEY_ va a estar definida en el `.env`, no en el código.
 
+## Contenido
+
+- [Info sobre las películas](https://github.com/undefinedschool/project-5-muvis-api#info-sobre-las-pel%C3%ADculas)
+- [Detalles de implementación](https://github.com/undefinedschool/project-5-muvis-api#detalles-de-implementaci%C3%B3n)
+- [Base de Datos](https://github.com/undefinedschool/project-5-muvis-api#base-de-datos)
+- [API Endpoints](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#api-endpoints)
+  - [Query Strings](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#query-strings)
+  - [Validaciones](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#validaciones)
+- [Middleware a utilizar](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#middleware-a-utilizar)
+- [`development` vs `production` mode](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#development-vs-production-mode)
+  - [Uso de `morgan`](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#uso-de-morgan)
+- [Hosting](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#hosting)
+- [Extra: buenas prácticas de performance y seguridad para aplicaciones Express](https://github.com/undefinedschool/project-5-muvis-api/blob/master/README.md#extra-buenas-pr%C3%A1cticas-de-performance-y-seguridad-para-aplicaciones-express)
+
+---
+
 ## Info sobre las películas
 
 El formato con el que guardaremos las películas en la base de datos será el siguiente:
@@ -48,7 +64,7 @@ add(movie) {
 }
 ```
 
-## API Endpoints
+## Endpoints
 
 - `GET /api/muvis`: retorna la lista de películas, en formato `JSON`.
 - `GET /api/muvis/:id`: retorna la película con el `id` correspondiente, en formato `JSON`. En el caso de que no exista, generar el error `"404 - The movie with the id {ID} was not found"` (donde ID es el parámetro utilizado) con `status code` 404 y pasarle el objeto `err` a `next`.
@@ -71,7 +87,7 @@ En todos los casos, si no hay películas para mostrar, debe retornarse el array 
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
-### Validaciones
+## Validaciones
 
 Utilizar el middleware [`express-validator`](https://express-validator.github.io/) para realizar las siguientes validaciones sobre el input (`body` del request)
   
