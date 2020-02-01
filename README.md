@@ -55,7 +55,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 ## Base de Datos
 
 - Para guardar las películas obtenidas, vamos a utilizar [`low-db`](https://github.com/typicode/lowdb) como base de datos. Utilizarlo un módulo aparte (importarlo donde sea necesario) y **definirle una API para interactuar con el mismo a través de diferentes métodos**.
-- Al iniciar la aplicación, en el caso de que la base de datos (ver ítem anterior) se encuentre vacía, debemos realizar el request correspondiente para obtener las primeras 100 películas de las mejor puntuadas para realizar el _seeding_ inicial.
+- Al iniciar la aplicación, en el caso de que la base de datos (ver ítem anterior) se encuentre vacía, debemos realizar el request correspondiente para obtener las primeras 100 películas (para lo cual va a ser necesario utilizar la [paginación](https://www.themoviedb.org/talk/53ff93520e0a2658e9000892)) de las mejor puntuadas para realizar el _seeding_ inicial.
 - Antes de guardar una nueva película en la db, vamos a validarla con un _schema_, utilizando [`ajv`](https://github.com/epoberezkin/ajv). Por ejemplo, si tenemos el método `add` para agregar películas, podríamos hacer algo como
 
 ```js
