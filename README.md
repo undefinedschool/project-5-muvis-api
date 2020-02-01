@@ -42,6 +42,8 @@ El formato con el que guardaremos las películas en la base de datos será el si
 add(movie) {
   if (valid(movie)) {
     db.get('muvis').push(movie);
+  } else {
+    console.error(errors);
   }
 }
 ```
