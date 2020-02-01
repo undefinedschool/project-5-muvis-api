@@ -19,7 +19,9 @@ El formato con el que guardaremos las películas en la base de datos será el si
   "rate": 8.32
 }
 ```
-   
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
 ## Detalles de implementación
 
 - Usar [`got`](https://github.com/sindresorhus/got) para realizar los requests.
@@ -30,16 +32,20 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
 
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
 ## Endpoints
 
 - `GET /api/muvis`: retorna la lista de películas, en formato `JSON`.
 - `GET /api/muvis/:id`: retorna la película con el `id` correspondiente, en formato `JSON`. En el caso de que no exista, generar el error `"404 - The movie with the id {ID} was not found"` (donde ID es el parámetro utilizado) con `status code` 404 y pasarle el objeto `err` a `next`.
-- `POST /api/muvis`: agrega una nueva película, con la [info especificada más arriba](). Validar el `body` del request como se indica más abajo. Si es inválido, generar el error `"400 - Bad Request"` y pasarle el objeto `err` a `next`, sino, agregar la película correspondiente y retornar la info de la misma en el `response`. El `id` con el que se guarde esta película debe ser mayor al máximo actual.
+- `POST /api/muvis`: agrega una nueva película, con la [info especificada más arriba](https://github.com/undefinedschool/project-5-muvis-api#info-sobre-las-pel%C3%ADculas). Validar el `body` del request como se indica más abajo. Si es inválido, generar el error `"400 - Bad Request"` y pasarle el objeto `err` a `next`, sino, agregar la película correspondiente y retornar la info de la misma en el `response`. El `id` con el que se guarde esta película debe ser mayor al máximo actual.
 - `PUT /api/muvis/:id`: actualiza la info de una película (el `id` no puede editarse). Para esto, primero se debe buscarla por el `id` y si no existe, debe agregar la nueva película, con el `id` correspondiente (mayor al máximo actual).
 - `DELETE /api/muvis/:id`: elimina la película con el `id` correspondiente. Para esto, primero debe buscarla por el `id`, si no existe, generar el error `"404 - The movie with the id {ID} was not found"` (donde ID es el parámetro utilizado), y un `status code` 404 y pasarle el objeto `err` a `next`.
 - `GET /api/muvis/genres`: retorna la lista de géneros (sin repetir) ordenados de forma ascendente, correspondientes a las películas que tengamos en la base de datos
 - `GET /api/muvis/years`: retorna la lista de años (sin repetir) ordenados de forma ascendente, correspondientes a las películas que tengamos en la base de datos
 - `GET /api/muvis/rates`: retorna la lista de puntajes (sin repetir) ordenados de forma ascendente, correspondientes a las películas que tengamos en la base de datos
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
 ### Query strings
 
@@ -48,6 +54,8 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Si se utilizan los query strings `?sortBy=title`, `?sortBy=year` ó `?sortBy=rate` con `GET /api/muvis`, debe retornarse la lista de películas ordenada por año ó nombre de forma ascendente, respectivamente.
 
 En todos los casos, si no hay películas para mostrar, debe retornarse el array vacío `[]` (siempre como `JSON`).
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
 ## Validaciones
 
@@ -59,6 +67,8 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 - `rate`: debe existir y ser un número entre 1 y 10, sino generar el error `movie rate is required and should be a number between 1 and 10.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 - `genres`: debe existir y ser un array de strings, sino generar el error `movie genre is required.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
 ## Middleware a utilizar
 
 - `Router` de `Express`
@@ -67,7 +77,7 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 - [`morgan`](https://www.npmjs.com/package/morgan), para loguear en la terminal todos los _requests_ y _responses_ generados (**sólo si estamos en modo desarrollo**)
 - [`helmet.js`](https://helmetjs.github.io/)
 
-[↑ Ir al inicio](https://github.com/undefinedschool/notes-apis#contenido)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
 
 ## `development` vs `production` mode
 
@@ -83,6 +93,10 @@ Definir los scripts `dev` y `start` en el `package.json` para poder correr nuest
 ](http://expressjs.com/en/advanced/best-practice-performance.html#ensure-your-app-automatically-restarts)
   - Habilitar la [compresión `GZIP`](https://alligator.io/nodejs/compression/) para todos los requests
 
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
 ## Hosting
 
 Hostear la API con [`now`](http://now.sh/)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
