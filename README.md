@@ -40,6 +40,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 
 ## Detalles de implementación
 
+- Utilizar `express-generator` para generar el scaffolding del proyecto, ejemplo `npx express-generator --git --no-view muvis-api`
 - Usar [`got`](https://github.com/sindresorhus/got) para realizar los requests.
 - Utilizar variables de entorno definidas en un archivo `.env` para valores como el puerto y hostname del server o _API KEYs_ necesarias
 - Para manipular las fechas, se recomienda utilizar [`date-fns`](https://date-fns.org/) (o hacerlo a mano).
@@ -148,6 +149,10 @@ if (process.env.NODE_ENV === 'production') {
 ## Hosting
 
 Hostear la API con [`now`](http://now.sh/)
+
+Para setear las variables de entorno, ver 
+  - [Using Environment Variables and Secrets](https://zeit.co/docs/v2/build-step#using-environment-variables-and-secrets)   
+  - [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
