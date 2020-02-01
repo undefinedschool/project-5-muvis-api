@@ -88,7 +88,7 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 - `Router` de `Express`
 - Custom Error-handling middleware (ver detalles en [helpful-express-middleware](https://www.rithmschool.com/courses/node-express-fundamentals/helpful-express-middleware))
 - [`express-validator`](https://express-validator.github.io/), para realizar las validaciones correspondientes
-- [`morgan`](https://www.npmjs.com/package/morgan), para loguear en la terminal todos los _requests_ y _responses_ generados (ver detalles en []())
+- [`morgan`](https://www.npmjs.com/package/morgan), para loguear en la terminal todos los _requests_ y _responses_ generados (ver detalles en [Uso de `morgan`](https://github.com/undefinedschool/project-5-muvis-api#uso-de-morgan))
 - [`helmet.js`](https://helmetjs.github.io/)
   - Ver [Use Helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet)
 
