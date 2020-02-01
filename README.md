@@ -131,3 +131,10 @@ if (process.env.NODE_ENV === 'production') {
 Hostear la API con [`now`](http://now.sh/)
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+
+## Extra: buenas prácticas de performance y seguridad para aplicaciones Express
+
+- Ver [Production best practices: performance and reliability](http://expressjs.com/en/advanced/best-practice-performance.html)
+- Ver [Production Best Practices: Security](http://expressjs.com/en/advanced/best-practice-security.html)
+
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
