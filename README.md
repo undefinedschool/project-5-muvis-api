@@ -69,7 +69,7 @@ add(movie) {
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
-## Endpoints
+## API Endpoints
 
 - `GET /api/muvis`: retorna la lista de películas, en formato `JSON`.
 - `GET /api/muvis/:id`: retorna la película con el `id` correspondiente, en formato `JSON`. En el caso de que no exista, generar el error `"404 - The movie with the id {ID} was not found"` (donde ID es el parámetro utilizado) con `status code` 404 y pasarle el objeto `err` a `next`.
