@@ -150,7 +150,7 @@ if (process.env.NODE_ENV === 'production') {
 
 ## Hosting
 
-Hostear la API con [`now`](http://now.sh/)
+Hostear la API con [`now`](http://now.sh/), en [modo `prod`](https://zeit.co/docs/v2/platform/deployments/#production)
 
 Para setear las variables de entorno, ver 
   - [Using Environment Variables and Secrets](https://zeit.co/docs/v2/build-step#using-environment-variables-and-secrets)   
