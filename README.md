@@ -36,7 +36,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 }
 ```
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Detalles de implementación
 
@@ -46,7 +46,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Base de Datos
 
@@ -64,6 +64,8 @@ add(movie) {
 }
 ```
 
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
+
 ## Endpoints
 
 - `GET /api/muvis`: retorna la lista de películas, en formato `JSON`.
@@ -75,7 +77,7 @@ add(movie) {
 - `GET /api/muvis/years`: retorna la lista de años (sin repetir) ordenados de forma ascendente, correspondientes a las películas que tengamos en la base de datos
 - `GET /api/muvis/rates`: retorna la lista de puntajes (sin repetir) ordenados de forma ascendente, correspondientes a las películas que tengamos en la base de datos
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ### Query strings
 
@@ -85,7 +87,7 @@ add(movie) {
 
 En todos los casos, si no hay películas para mostrar, debe retornarse el array vacío `[]` (siempre como `JSON`).
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Validaciones
 
@@ -97,7 +99,7 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 - `rate`: debe existir y ser un número entre 1 y 10, sino generar el error `movie rate is required and should be a number between 1 and 10.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 - `genres`: debe existir y ser un array de strings, sino generar el error `movie genre is required.`, con `status code` 400 y pasarle el objeto `err` a `next`.
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Middleware a utilizar
 
@@ -108,7 +110,7 @@ Utilizar el middleware [`express-validator`](https://express-validator.github.io
 - [`helmet.js`](https://helmetjs.github.io/)
   - Ver [Use Helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet)
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## `development` vs `production` mode
 
@@ -124,7 +126,7 @@ Definir los scripts `dev` y `start` en el `package.json` para poder correr nuest
   - Habilitar la [compresión `GZIP`](https://alligator.io/nodejs/compression/) para todos los requests
   - [`morgan`](https://www.npmjs.com/package/morgan) en modo `common` (ver detalles abajo)
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ### Uso de `morgan`
 
@@ -140,17 +142,17 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Hosting
 
 Hostear la API con [`now`](http://now.sh/)
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ## Extra: buenas prácticas de performance y seguridad para aplicaciones Express
 
 - Ver [Production best practices: performance and reliability](http://expressjs.com/en/advanced/best-practice-performance.html)
 - Ver [Production Best Practices: Security](http://expressjs.com/en/advanced/best-practice-security.html)
 
-[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api)
+[↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
