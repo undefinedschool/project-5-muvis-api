@@ -41,6 +41,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 ## Detalles de implementación
 
 - Usar [`got`](https://github.com/sindresorhus/got) para realizar los requests.
+- Utilizar variables de entorno definidas en un archivo `.env` para valores como el puerto y hostname del server o _API KEYs_ necesarias
 - Para manipular las fechas, se recomienda utilizar [`date-fns`](https://date-fns.org/) (o hacerlo a mano).
 - Utilizar el `Router` de `Express` para definir la lógica de routing en un módulo aparte, y setear `/api` como prefijo de todas las rutas. Utilizar el método [`route()`](http://expressjs.com/en/4x/api.html#router.route), para definir las rutas de una forma más declarativa. 
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
