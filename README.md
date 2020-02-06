@@ -130,6 +130,17 @@ Definir los scripts `dev` y `start` en el `package.json` para poder correr nuest
   - Habilitar la [compresión `GZIP`](https://alligator.io/nodejs/compression/) para todos los requests
   - [`morgan`](https://www.npmjs.com/package/morgan) en modo `common` (ver detalles abajo)
 
+### Ventajas de usar `pm2`
+
+[`pm2`](https://pm2.keymetrics.io/) es un administrador (_manager_) de procesos de Node, que entre otras cosas va a 
+
+- reiniciar la aplicación automáticamente, en el caso de que _crashee_
+- generar un log de errores y excepciones, en la ruta `/home/USERNAME/.pm2/logs/app-err.log.`
+- reiniciar cualquier aplicación que esté manejando si el server se reinicia
+- mostrar un reporte de los diferentes procesos corriendo
+
+![](https://assets.digitalocean.com/articles/PM2_Node.js/1.png)
+
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
 ### Uso de `morgan`
