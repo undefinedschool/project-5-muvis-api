@@ -49,6 +49,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En el caso de que una película no cuente con la imagen correspondiente (poster, backdrop), utilizar un [placeholder](https://placeholder.com/)
 - En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
+- Usar _Postman_ para testear los diferentes endpoints
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
 
