@@ -44,7 +44,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Utilizar `express-generator` para generar el scaffolding del proyecto, ejemplo `npx express-generator --git --no-view muvis-api`
 - Usar [`got`](https://github.com/sindresorhus/got) para realizar los requests.
 - Utilizar variables de entorno definidas en un archivo `.env` para valores como el puerto y hostname del server o _API KEYs_ necesarias
-- Para manipular las fechas, se recomienda utilizar [`date-fns`](https://date-fns.org/), [`dayjs`](https://github.com/iamkun/dayjs) o hacerlo a mano.
+- Para manipular las fechas, se recomienda utilizar [`date-fns`](https://date-fns.org/), [`dayjs`](https://github.com/iamkun/dayjs) o [hacerlo a mano](https://flaviocopes.com/javascript-dates/).
 - Utilizar el `Router` de `Express` para definir la lógica de routing en un módulo aparte, y [setear `/api/muvis` como prefijo de todas las rutas](https://www.rithmschool.com/courses/node-express-fundamentals/express-router). Utilizar el método [`route()`](http://expressjs.com/en/4x/api.html#router.route), para definir las rutas de una forma más declarativa. 
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En el caso de que una película no cuente con la imagen correspondiente (poster, backdrop), utilizar un [placeholder](https://placeholder.com/)
