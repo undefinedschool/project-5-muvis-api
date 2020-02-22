@@ -48,7 +48,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
 - Utilizar el `Router` de `Express` para definir la lógica de routing en un módulo aparte, y [setear `/api/muvis` como prefijo de todas las rutas](https://www.rithmschool.com/courses/node-express-fundamentals/express-router). Utilizar el método [`route()`](http://expressjs.com/en/4x/api.html#router.route), para definir las rutas de una forma más declarativa. 
 - Utilizar `nodemon` para desarrollar (**sólo en modo desarrollo**).
 - En el caso de que una película no cuente con la imagen correspondiente (poster, backdrop), utilizar un [placeholder](https://placeholder.com/)
-- En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
+- En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad) o [esta otra](https://www.digitalocean.com/community/tutorials/how-to-debug-node-js-code-in-visual-studio-code).
 - Usar _Postman_ para testear los diferentes endpoints
 
 [↑ Ir al inicio](https://github.com/undefinedschool/project-5-muvis-api#project-5-muvis-api)
