@@ -1,4 +1,4 @@
-![Project 5: Muvis API](https://i.imgur.com/XAeIKwg.png)
+# ![Project 5: Muvis API](https://i.imgur.com/XAeIKwg.png)
 
 Vamos a utilizar la [API de The Movie DB](https://www.themoviedb.org/faq/api) para obtener la información de las primeras 100 [películas mejor puntuadas](https://developers.themoviedb.org/3/movies/get-top-rated-movies).
 
