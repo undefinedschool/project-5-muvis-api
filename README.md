@@ -29,7 +29,7 @@ El formato con el que guardaremos las películas en la base de datos será el si
   "id": 105,
   "title": "Back to the Future",
   "overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
-  "date": "July 3, 1985",
+  "date": "1985/07/03",
   "genres": ["Adventure", "Comedy", "Science Fiction", "Family"],
   "poster": "https://image.tmdb.org/t/p/w1280/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg",
   "backdrop": "https://image.tmdb.org/t/p/w1280/xBKGJQsAIeweesB79KC89FpBrVr.jpg",
